@@ -22,6 +22,12 @@ public class Contact extends Person {
 		this.email = email;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		// TODO: vad har vi för kriterier för två Contact objekt att vara lika?
+		return super.equals(obj);
+	}
+
 	public String getAddress() {
 		return address;
 	}
