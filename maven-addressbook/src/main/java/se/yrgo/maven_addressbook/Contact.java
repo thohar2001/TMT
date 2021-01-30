@@ -6,11 +6,46 @@ public class Contact extends Person {
 	private int phoneNumber;
 	private String email;
 	
+	/**
+	 * 
+	 * @param firstname Lastname.
+	 * @param lastname Firstname.
+	 * @param age Current age.
+	 * @param address Street address.
+	 * @param phoneNumber Swedish phone number without country code. 
+	 * @param email Email address of contact.
+	 */
 	public Contact(String firstname, String lastname, int age, String address, int phoneNumber, String email) {
 		super(); 		// TODO: call superclass constructor with super(firstname, lastname, age);
 		this.address = address;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	
 	
 }
