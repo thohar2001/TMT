@@ -24,7 +24,7 @@ public class Contact extends Person {
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO: vad har vi för kriterier för två Contact objekt att vara lika?
+		// TODO: vad har vi för kriterier för två Contact objekt att vara lika? Två lika mejladresser?
 		return super.equals(obj);
 	}
 
