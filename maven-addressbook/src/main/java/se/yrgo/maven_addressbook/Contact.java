@@ -1,33 +1,29 @@
 package se.yrgo.maven_addressbook;
 
+import java.util.Objects;
+
 public class Contact extends Person {
-	
+
 	private String address;
 	private int phoneNumber;
 	private String email;
-	
+
 	/**
 	 * 
-	 * @param firstname Lastname.
-	 * @param lastname Firstname.
-	 * @param age Current age.
-	 * @param address Street address.
-	 * @param phoneNumber Swedish phone number without country code. 
-	 * @param email Email address of contact.
+	 * @param firstname   Lastname.
+	 * @param lastname    Firstname.
+	 * @param age         Current age.
+	 * @param address     Street address.
+	 * @param phoneNumber Swedish phone number without country code.
+	 * @param email       Email address of contact.
 	 */
 	public Contact(String firstname, String lastname, int age, String address, int phoneNumber, String email) {
-		super(); 		// TODO: call superclass constructor with super(firstname, lastname, age);
+		super(); // TODO: call superclass constructor with super(firstname, lastname, age);
 		this.address = address;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		// TODO: vad har vi för kriterier för två Contact objekt att vara lika? Två lika mejladresser?
-		return super.equals(obj);
-	}
-
+	
 	public String getAddress() {
 		return address;
 	}
@@ -51,7 +47,30 @@ public class Contact extends Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-	
+
+	/**
+	 * Returns true if both contacts have the same e-mail address.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Contact))
+			return false;
+		Contact other = (Contact) obj;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		return result;
+	}
 }
