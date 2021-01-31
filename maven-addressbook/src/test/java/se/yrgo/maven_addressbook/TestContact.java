@@ -6,27 +6,39 @@ import org.junit.Test;
 
 public class TestContact {
 
+	private String firstname = "Bo";
+	private String lastname = "Andersson";
+	private int age = 35;
+	private String address = "Dirty Boulevard";
+	private int telephone = 555164200;
+	private String email = "email@andersson.com";
+	
 	@Test
 	public void testConstructor() {
-		String firstname = "Bo";
-		String lastname = "Andersson";
-		int age = 35;
-		String address = "Dirty Boulevard";
-		int telephone = 555164200;
-		String email = "email@andersson.com";
 		Contact c = new Contact(firstname, lastname, age, address, telephone, email);
-		// TODO: Check that firstname, lastname and age are correct.
-		fail("Not yet implemented");
+		
+		assertEquals(firstname, null); // TODO: replace null with actual value. 		
+		assertEquals(lastname, null); // TODO: replace null with actual value.
+		assertEquals(age, null); // TODO: replace null with actual value.
+		assertEquals(address, c.getAddress());
+		assertEquals(telephone, c.getPhoneNumber());
+		assertEquals(email, c.getEmail());
 	}
 	
 	@Test
 	public void test2EqualContact() {
-		fail("Not yet implemented");
+		Contact c1 = new Contact(firstname, lastname, age, address, telephone, email);
+		Contact c2 = new Contact(firstname, lastname, age, address, telephone, email);
+		
+		assertEquals(c1, c2);
 	}
 
 	@Test
 	public void test2NonEqualContact() {
-		fail("Not yet implemented");
+		Contact c1 = new Contact(firstname, lastname, age, address, telephone, email);
+		Contact c2 = new Contact("George", "Costanza", 50, "New York city", 55516424, "myemail@hotmail.com");
+		
+		assertNotEquals(c1, c2);
 	}
 	
 }
