@@ -17,9 +17,9 @@ public class TestContact {
 	public void testConstructor() {
 		Contact c = new Contact(firstname, lastname, age, address, telephone, email);
 		
-		assertEquals(firstname, null); // TODO: replace null with actual value. 		
-		assertEquals(lastname, null); // TODO: replace null with actual value.
-		assertEquals(age, null); // TODO: replace null with actual value.
+		assertEquals(firstname, c.getFirstName()); // TODO: replace null with actual value. 		
+		assertEquals(lastname, c.getLastName()); // TODO: replace null with actual value.
+		assertEquals(age, c.getAge()); // TODO: replace null with actual value.
 		assertEquals(address, c.getAddress());
 		assertEquals(telephone, c.getPhoneNumber());
 		assertEquals(email, c.getEmail());

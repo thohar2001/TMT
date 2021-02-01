@@ -18,7 +18,7 @@ public class Contact extends Person {
 	 * @param email       Email address of contact.
 	 */
 	public Contact(String firstname, String lastname, int age, String address, int phoneNumber, String email) {
-		super(); // TODO: call superclass constructor with super(firstname, lastname, age);
+		super(firstname, lastname, age);
 		this.address = address;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
