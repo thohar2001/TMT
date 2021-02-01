@@ -12,14 +12,18 @@ public class AddressBook {
 	
 	/**
 	 * Constructor that takes a List of contacts
-	 * @param List of contacts
+	 * 
+	 * @param contacts List of contacts
 	 */
 	public AddressBook(List<Contact> contacts) {
 		this.contacts = new ArrayList<>(contacts);
 	}
 	
 	/**
-	 * @return the number of contacts.
+	 * 
+	 * Returns the number of contacts in addressbook.
+	 * 
+	 * @return Number of contacts in addressbook.
 	 */
 	public int getNumberOfContacts() {
 		return contacts.size();
@@ -27,7 +31,8 @@ public class AddressBook {
 	
 	/**
 	 * Add a new contact to the List of contacts.
-	 * @param contact
+	 * 
+	 * @param contact Contact to add.
 	 */
 	public void addContact(Contact contact) {
 		this.contacts.add(contact);
@@ -35,7 +40,8 @@ public class AddressBook {
 	
 	/**
 	 * Removes a specific contact from the List of contacts.
-	 * @param contact
+	 * 
+	 * @param contact Contact to remove.
 	 */
     public void removeContact(Contact contact) {
     	this.contacts.remove(contacts.indexOf(contact));
@@ -43,8 +49,9 @@ public class AddressBook {
     
     /**
      * Finds a contact by Contact email. 
-     * @param email
-     * @return Contact
+     * 
+     * @param email E-mail address of contact.
+     * @return Contact Contact that matches the e-mail address given as parameter.
      * @throws Exception when no Contact object is found
      */
     public Contact findContact(String email) throws Exception {

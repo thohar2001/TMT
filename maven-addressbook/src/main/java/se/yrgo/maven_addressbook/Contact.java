@@ -10,6 +10,8 @@ public class Contact extends Person {
 
 	/**
 	 * 
+	 * Creates an addressbook contact.
+	 * 
 	 * @param firstname   Lastname.
 	 * @param lastname    Firstname.
 	 * @param age         Current age.
