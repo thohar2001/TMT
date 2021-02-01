@@ -6,6 +6,11 @@ public class Person {
 	String lastName;
 	int age;
 	
+	/*
+	 * Constructor that takes all fields as parameter
+	 * @param firstName, lastName, age
+	 */
+	
 	public Person(String firstName, String lastName, int age) {
 		super();
 		this.firstName = firstName;
