@@ -7,8 +7,9 @@ import org.junit.Test;
 public class TestPerson {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testGetPersonIgnoringCase() {
+		Person person1 = new Person("BoSSe", "Bossesson", 12);
+		assertTrue(person1.getFirstName().equalsIgnoreCase("bosse"));
 	}
-
+	
 }
