@@ -7,7 +7,7 @@ import org.junit.Test;
 public class TestPerson {
 
 	/**
-	 *  @param test for case sensativ input
+	 *  @param test for case sensativ input.
 	 */
 	@Test
 	public void testgetFirstNameIgnoringCase() {
@@ -16,7 +16,7 @@ public class TestPerson {
 	}
 	
 	/**
-	 *  @param test for getFirstName
+	 *  @param test for getFirstName.
 	 */
 	@Test
 	public void testgetFirstName() {
